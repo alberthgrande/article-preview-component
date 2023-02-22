@@ -24,7 +24,7 @@ body {
   max-width: 750px;
   background-color: #fff;
   border-radius: 0.5rem;
-  overflow: hidden;
+  /* overflow: hidden; */
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
@@ -34,9 +34,109 @@ body {
   object-fit: cover;
 }
 
-@media only screen and (max-width: 48rem) {
+/* article-container */
+.drawer-title {
+  color: var(--clr-Very-Dark-Grayish-Blue);
+}
+
+.drawer-text {
+  color: var(--clr-Desaturated-Dark-Blue);
+  margin: 1rem 0;
+}
+
+/* author */
+.author {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.author-profile {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.author-profile__image {
+  height: auto;
+  width: 50px;
+  border-radius: 50%;
+}
+.author-name {
+  font-size: var(--fs-text);
+  color: var(--clr-Very-Dark-Grayish-Blue);
+}
+.author-date {
+  color: var(--clr-Desaturated-Dark-Blue);
+}
+
+/* icon-share */
+.icon-share {
+  background-color: var(--clr-Light-Grayish-Blue);
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+
+  /* layout */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (min-width: 57.125rem) {
+  /* article-container */
+  .article-container {
+    padding: 2rem;
+  }
+  /* author */
+  .author {
+    margin-top: 2rem;
+  }
+
+  /* tooltip-share */
+  .tooltip-share {
+    position: absolute !important;
+    right: -100px;
+    background-color: var(--clr-Very-Dark-Grayish-Blue);
+    transform: translateY(-130%);
+    width: 250px;
+    padding: 1rem 1.8rem;
+
+    display: flex;
+    justify-content: center;
+  }
+
+  .tooltip-social__media {
+    display: flex;
+  }
+}
+
+@media only screen and (max-width: 57.125rem) {
   .container {
     flex-direction: column;
     max-width: 320px;
+  }
+
+  .drawer-content {
+    padding: 2rem 2rem 0;
+  }
+
+  /* article-container */
+  .drawer-title {
+    font-size: 1rem;
+  }
+
+  .drawer-text {
+    color: var(--clr-Desaturated-Dark-Blue);
+    margin: 1.5rem 0;
+  }
+
+  /* author */
+  .author-container {
+    background-color: var(--clr-Very-Dark-Grayish-Blue);
+    padding: 1rem 2rem;
   }
 }
