@@ -1,0 +1,42 @@
+@import url("reset.css");
+
+:root {
+  --clr-Very-Dark-Grayish-Blue: hsl(217, 19%, 35%);
+  --clr-Desaturated-Dark-Blue: hsl(214, 17%, 51%);
+  --clr-Grayish-Blue: hsl(212, 23%, 69%);
+  --clr-Light-Grayish-Blue: hsl(210, 46%, 95%);
+
+  --fs-text: 0.8125rem;
+  --ff-headigs: "Manrope", sans-serif;
+}
+
+body {
+  display: grid;
+  place-content: center;
+
+  font-family: var(--ff-headigs);
+  font-size: var(--fs-text);
+  background-color: var(--clr-Light-Grayish-Blue);
+}
+
+.container {
+  display: flex;
+  max-width: 750px;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.drawer-image {
+  max-width: 20rem;
+  min-height: 20rem;
+  object-fit: cover;
+}
+
+@media only screen and (max-width: 48rem) {
+  .container {
+    flex-direction: column;
+    max-width: 320px;
+  }
+}
